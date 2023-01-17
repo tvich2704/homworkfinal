@@ -12,3 +12,16 @@ Console.WriteLine($"[{string.Join(", ", array3)}]->[{string.Join(", ", answer(ar
 // Console.WriteLine($"[{string.Join(", ", str)}]->[{string.Join(", ", answer(str))}]");
 
 
+string[] answer(string[] array)
+{   
+    string count = "";
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            count += array[i] + ", ";
+        }
+    }
+    string[] answerArray = count.Split(", ", StringSplitOptions.RemoveEmptyEntries);
+    return answerArray;
+}
